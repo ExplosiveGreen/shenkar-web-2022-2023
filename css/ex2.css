@@ -56,15 +56,22 @@ main {
     margin-top: 0;
     margin-bottom: 0;
 }
-#sentence1 {
+.preview > img {
+    margin:24px 40px 24px 40px;
+}
+.sentence1 {
     font-family:'Nunito';
     font-size: 36px;
     font-weight: bold;
+    display: block;
+    width: 550px;
 }
-#sentence2 {
+.sentence2 {
     font-family:'Nunito';
     font-size: 24px;
     padding-top: 16px;
+    display: block;
+    width: 450px;
 }
 .no-bold {
     font-weight: normal;
