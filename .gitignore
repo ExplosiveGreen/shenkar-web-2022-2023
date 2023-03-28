@@ -1,2 +1,5 @@
 .vscode
 .dccache
+.git
+.github
+.ftp-deploy-sync-state.json
