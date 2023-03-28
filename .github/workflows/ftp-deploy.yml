@@ -21,4 +21,4 @@ jobs:
                   .git
                   .github
                   .ftp-deploy-sync-state.json
-                  
+                  .gitignore
