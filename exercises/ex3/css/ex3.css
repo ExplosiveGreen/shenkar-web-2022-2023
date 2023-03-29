@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body, html {
+    height: 100%;
+    position: relative;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+header, main, footer, nav, aside, section  {
+    display: block;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+header, footer, main {
+    width: 100%;
+}
+header {
+    background-color: #F2E9E9;
+    height: 123px;
+}
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 34px;
+    height: 51px;
+}
+header nav a {
+    margin-right: 18px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+header nav a:hover span {
+    font-weight: 700;
+}
+header nav a span {
+    font-family: 'Amiko';
+    font-weight: 400;
+    font-size: 24px;
+}
+header nav a.selected {
+    background-image: radial-gradient(circle at 38% 10px, red 7px, transparent 6px);
+}
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+main{
+    flex-grow: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+main #about-mix {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main #about-mix p:nth-child(1) {
+    font-size: 72px;
+    font-family: 'Amiko';
+    font-weight: 700;
+}
+main #about-mix p:nth-child(2) {
+    font-size: 24px;
+    font-family: 'Amiko';
+    font-weight: 700;
+}
+main #mix-logo {
+    margin-top: 91px;
+    margin-left: 70px;
+}
+main #mix-logo {
+    margin-top: 91px;
+    margin-left: 70px;
+}
+#content {
+    display: flex;
+    flex-direction: row;
+}
+.vertical-box-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.vertical-box-list section {
+    width: 457px;
+    height: 299px;
+    background-color:#C4C4C4;
+    margin-bottom: 70px;
+}
+.vertical-box-list:nth-child(1) {
+    margin-top: 119px;
+    margin-right: 55px;
+}
+.vertical-box-list:nth-child(2) {
+    margin-top: 287px;
+}
+aside{
+    float: right;
+    background-color: #EBEF18;
+    height: 100%;
+    width: 169px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.squere-list section {
+    width: 80px;
+    height: 80px;
+}
+.squere-list section:nth-child(1) {
+    background-color:#000000;
+    margin-top: 119px;
+}
+.squere-list section:nth-child(2) {
+    background-color:#FFFFFF;
+    margin-top: 48px;
+    float: right;
+}
+.squere-list section:nth-child(3) {
+    background-color:#000000;
+    margin-top: 417px;
+}
+aside #my-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+aside #my-name a {
+    font-family: 'Amiko';
+    font-weight: 400;
+    font-size: 96px;
+}
+footer{
+    position: fixed;
+    height: 41px;
+    bottom: 0;
+    background-color: #000000;
+}
