@@ -134,6 +134,7 @@ p {
 .card a span {
     display: block;
     padding-top: 11.2px;
+    font-family: 'Rubik';
 }
 .card a:hover {
     background-color: #000000;
