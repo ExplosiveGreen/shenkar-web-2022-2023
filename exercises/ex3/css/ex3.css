@@ -79,13 +79,69 @@ main #mix-logo {
     margin-top: 91px;
     margin-left: 70px;
 }
-main #mix-logo {
-    margin-top: 91px;
-    margin-left: 70px;
-}
-#content {
+.row {
     display: flex;
     flex-direction: row;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.yellow {
+    background-color: #EBEF18;
+    margin-bottom: 11px;
+    margin-left: 13px;
+}
+main #mix-logo > section:nth-child(1) > section:nth-child(1){
+    margin-top: 44px;
+}
+main #mix-logo > section:nth-child(1) > section:nth-child(1) > section:nth-child(1) {
+    width: 75px;
+    height: 23px;
+}
+main #mix-logo > section:nth-child(1) > section:nth-child(1) > section:nth-child(2) {
+    width: 136px;
+    height: 46px;
+}
+main #mix-logo > section:nth-child(1) > section:nth-child(1) > section:nth-child(3) {
+    width: 134px;
+    height: 404px;
+}
+main #mix-logo > section:nth-child(1) > section:nth-child(1) > section:nth-child(4) {
+    width: 88px;
+    height: 28px;
+}
+main #mix-logo > section:nth-child(1) > section:nth-child(1) > .row .yellow {
+    width: 25px;
+    height: 26px;
+}
+main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(1) > .yellow {
+    width: 246px;
+    height: 352px;
+    margin-top: 44px;
+}
+main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(1) > .column > .yellow {
+    width: 28px;
+    height: 55px;
+    margin-bottom: 11px;
+}
+main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(1) > .column > section:nth-child(4) {
+    height: 198px;
+}
+main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(2) > section:nth-child(1) {
+    width: 123px;
+    height: 211px;
+}
+main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(2) > section:nth-child(2) > section:nth-child(1) > .yellow {
+    width: 55px;
+    height: 105px;
+}
+main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(2) > section:nth-child(2) > section:nth-child(1) > section:nth-child(2) {
+    margin-left: 41px;
+}
+main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(2) > section:nth-child(2) > .yellow{
+    width: 110px;
+    height: 58px;
 }
 .vertical-box-list {
     display: flex;
