@@ -135,6 +135,12 @@ p {
     display: block;
     padding-top: 11.2px;
 }
+.card a:hover {
+    background-color: #000000;
+}
+.card a:hover span {
+    color: #ffffff;
+}
 ul {
     margin-bottom: 40px;
 }
