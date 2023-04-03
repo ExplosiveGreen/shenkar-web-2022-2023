@@ -6,9 +6,6 @@ body, html {
     height: 100%;
     position: relative;
 }
-body{
-    overflow: auto;
-}
 header, main, footer, nav, aside, section  {
     display: block;
 }
@@ -49,13 +46,16 @@ header nav a.selected {
 #wrapper {
     display: flex;
     flex-direction: row;
+    height: calc(100% - 123px - 41px);
 }
 main{
     flex-grow: 1;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: row;
+    overflow: scroll;
 }
 main #about-mix {
     display: flex;
@@ -161,7 +161,6 @@ main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child
 aside{
     float: right;
     background-color: #EBEF18;
-    height: 100vh;
     width: 169px;
     display: flex;
     flex-direction: column;
