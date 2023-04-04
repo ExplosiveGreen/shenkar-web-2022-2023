@@ -146,8 +146,9 @@ main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child
     flex: 1;
 }
 .vertical-box-list section {
-    width: 457px;
-    height: 299px;
+    --width: calc((100vw - 55px - 151px - 151px)/2);
+    width: var(--width);
+    height: calc(var(--width) * (299 / 457));
     background-color:#C4C4C4;
     margin-bottom: 70px;
 }
