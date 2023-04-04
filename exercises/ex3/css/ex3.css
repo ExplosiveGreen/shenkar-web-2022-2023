@@ -151,6 +151,13 @@ main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child
     background-color:#C4C4C4;
     margin-bottom: 70px;
 }
+@media screen and (max-width: 1440px){
+    .vertical-box-list section {
+        --width: calc((100vw - 302px - 55px) / 2);
+        width: var(--width);
+        height: calc(var(--width) * (299 / 457));
+    }
+}
 .vertical-box-list:nth-child(1) {
     margin-top: 119px;
     margin-right: 55px;
