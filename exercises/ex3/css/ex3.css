@@ -6,6 +6,12 @@ body, html {
     height: 100%;
     position: relative;
 }
+#wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 header, main, footer, nav, aside, section  {
     display: block;
 }
@@ -20,33 +26,54 @@ header {
     background-color: #F2E9E9;
     height: 123px;
 }
-header nav {
+header section {
+    width: 80px;
+    height: 80px;
+    background-color: #000000;
+    float: right;
+    margin-top: 21px;
+    margin-right: 21px;
+}
+nav {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
-header nav a {
+nav a {
     margin-right: 18px;
-    height: 100%;
+    height: 105px;
     display: flex;
     align-items: center;
 }
-header nav a:hover span {
+nav a:hover span {
     font-weight: 700;
 }
-header nav a span {
+nav a span {
     font-family: 'Amiko';
     font-weight: 400;
     font-size: 24px;
 }
-header nav a.selected {
+nav a.selected {
     background-image: radial-gradient(circle at 50% 20%, red 7px, transparent 6px);
 }
-#wrapper {
+#layout2-body, #index-body {
     display: flex;
     flex-direction: row;
     height: calc(100% - 123px - 41px);
+}
+#layout3-body {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - 123px - 41px - 400px);
+}
+@media screen and (max-width: 1080px){
+    #layout3-body {
+        flex-direction: column;
+    }
+}
+#nav-section {
+    background: #E5E5E5;
 }
 main{
     flex-grow: 1;
@@ -57,22 +84,22 @@ main{
     flex-direction: row;
     overflow: scroll;
 }
-main #about-mix {
+#about-mix {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-main #about-mix p:nth-child(1) {
+#about-mix p:nth-child(1) {
     font-size: 72px;
     font-family: 'Amiko';
     font-weight: 700;
 }
-main #about-mix p:nth-child(2) {
+#about-mix p:nth-child(2) {
     font-size: 24px;
     font-family: 'Amiko';
     font-weight: 700;
 }
-main #mix-logo {
+#mix-logo {
     margin-left: 70px;
 }
 .row {
@@ -88,54 +115,54 @@ main #mix-logo {
     margin-bottom: 11px;
     margin-left: 13px;
 }
-main #mix-logo > section:nth-child(1) > section:nth-child(1){
+#mix-logo > section:nth-child(1) > section:nth-child(1){
     margin-top: 44px;
 }
-main #mix-logo > section:nth-child(1) > section:nth-child(1) > section:nth-child(1) {
+#mix-logo > section:nth-child(1) > section:nth-child(1) > section:nth-child(1) {
     width: 75px;
     height: 23px;
 }
-main #mix-logo > section:nth-child(1) > section:nth-child(1) > section:nth-child(2) {
+#mix-logo > section:nth-child(1) > section:nth-child(1) > section:nth-child(2) {
     width: 136px;
     height: 46px;
 }
-main #mix-logo > section:nth-child(1) > section:nth-child(1) > section:nth-child(3) {
+#mix-logo > section:nth-child(1) > section:nth-child(1) > section:nth-child(3) {
     width: 134px;
     height: 404px;
 }
-main #mix-logo > section:nth-child(1) > section:nth-child(1) > section:nth-child(4) {
+#mix-logo > section:nth-child(1) > section:nth-child(1) > section:nth-child(4) {
     width: 88px;
     height: 28px;
 }
-main #mix-logo > section:nth-child(1) > section:nth-child(1) > .row .yellow {
+#mix-logo > section:nth-child(1) > section:nth-child(1) > .row .yellow {
     width: 25px;
     height: 26px;
 }
-main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(1) > .yellow {
+#mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(1) > .yellow {
     width: 246px;
     height: 352px;
     margin-top: 44px;
 }
-main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(1) > .column > .yellow {
+#mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(1) > .column > .yellow {
     width: 28px;
     height: 55px;
     margin-bottom: 11px;
 }
-main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(1) > .column > section:nth-child(4) {
+#mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(1) > .column > section:nth-child(4) {
     height: 198px;
 }
-main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(2) > section:nth-child(1) {
+#mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(2) > section:nth-child(1) {
     width: 123px;
     height: 211px;
 }
-main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(2) > section:nth-child(2) > section:nth-child(1) > .yellow {
+#mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(2) > section:nth-child(2) > section:nth-child(1) > .yellow {
     width: 55px;
     height: 105px;
 }
-main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(2) > section:nth-child(2) > section:nth-child(1) > section:nth-child(2) {
+#mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(2) > section:nth-child(2) > section:nth-child(1) > section:nth-child(2) {
     margin-left: 41px;
 }
-main #mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(2) > section:nth-child(2) > .yellow{
+#mix-logo > section:nth-child(1) > section:nth-child(2) > section:nth-child(2) > section:nth-child(2) > .yellow{
     width: 110px;
     height: 58px;
 }
@@ -172,6 +199,11 @@ aside{
     flex-direction: column;
     justify-content: space-between;
 }
+#responsive-aside {
+    background-color: #1847EF4D;
+    width: 104px;
+    flex-shrink: 1;
+}
 .squere-list section {
     width: 80px;
     height: 80px;
@@ -198,6 +230,11 @@ aside #my-name a {
     font-family: 'Amiko';
     font-weight: 400;
     font-size: 96px;
+}
+#yellow-area {
+    height: 400px;
+    width: 100%;
+    background-color: #EBEF18;
 }
 footer{
     position: fixed;
