@@ -83,6 +83,7 @@ main{
     display: flex;
     flex-direction: row;
     overflow: scroll;
+    overflow-x: hidden;
 }
 #about-mix {
     display: flex;
