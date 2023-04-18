@@ -21,7 +21,6 @@ $("#box-btn").on("click", function () {
     .html(`<p>${letterList[content.children().length]}</p>`);
     $(newSection.children()[0]).hide();
     newSection.on('click', function () {
-      console.log(this,this.childNodes[0]);
       $(this.childNodes[0]).toggle();
       if (!currentShow) {
         currentShow = this;
