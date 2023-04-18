@@ -23,8 +23,8 @@
         var html5QrcodeScanner = new Html5QrcodeScanner(
             "qr-reader", { fps: 10, qrbox: 250 });
         function onScanSuccess(decodedText, decodedResult) {
-                alert(`Scan result ${decodedText} 1`, decodedResult);
-                html5QrcodeScanner.clear();
+                alert(`Scan result ${decodedText}`, decodedResult);
+                html5QrcodeScanner.render(onScanSuccess);
         }
         html5QrcodeScanner.render(onScanSuccess);
     });
