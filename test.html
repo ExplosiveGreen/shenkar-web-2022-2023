@@ -20,13 +20,12 @@
 
     docReady(function () {
         var resultContainer = document.getElementById('qr-reader-results');
-        var html5QrcodeScanner = new Html5QrcodeScanner(
-            "qr-reader", { fps: 10, qrbox: 250 });
+        var html5QrCode = new Html5Qrcode("qr-reader");
         function onScanSuccess(decodedText, decodedResult) {
             resultContainer.innerHTML = `Scan result ${decodedText}`;
-            html5QrcodeScanner.clear();
+            html5QrCode.stop();
         }
-        html5QrcodeScanner.render(onScanSuccess);
+        html5QrCode.start({ facingMode: "user" }, { fps: 10, qrbox: 250 }, onScanSuccess);
     });
 </script>
 </head>
