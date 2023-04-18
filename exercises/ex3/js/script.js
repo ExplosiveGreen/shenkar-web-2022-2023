@@ -3,7 +3,7 @@ let currentLettersList = null;
 let lastLetterVal;
 let newSection;
 let numletters = 0;
-let content = $("#content-area");
+const content = $("#content-area");
 $("#box-btn").on("click", function () {
   lastLetterVal = "A".charCodeAt(0) + Math.floor(numletters / 2);
   currentLettersList = [
