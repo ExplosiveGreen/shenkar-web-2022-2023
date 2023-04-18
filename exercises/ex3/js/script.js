@@ -4,7 +4,7 @@ let numletters = 0;
 let lastLetterVal;
 let newSection;
 let content = document.getElementById("content-area");
-document.getElementById("box-btn").addEventListener("click", function () {
+document.getElementById("box-btn").onclick =  function () {
   lastLetterVal = "A".charCodeAt(0) + Math.floor(numletters / 2);
   letterList.push(
     ...[
@@ -23,7 +23,7 @@ document.getElementById("box-btn").addEventListener("click", function () {
       : "80px";
     newSection.id =
       "box-" + document.getElementById("content-area").children.length;
-    newSection.addEventListener("click", function (e) {
+    newSection.onclick = function (e) {
       e.target.innerHTML = e.target.innerHTML
         ? ""
         : "" + letterList[parseInt(e.target.id.split("-")[1])];
@@ -43,13 +43,10 @@ document.getElementById("box-btn").addEventListener("click", function () {
       }
       currentShow.style.background = "gray";
       e.target.style.background = "gray";
-      currentShow.parentNode.replaceChild(
-        currentShow.cloneNode(true),
-        currentShow
-      );
-      e.target.removeEventListener("click", arguments.callee);
+      currentShow.onclick = null;
+      e.target.onclick = null;
       currentShow = null;
-    });
+    };
     content.appendChild(newSection);
   }
-});
+};
