@@ -3,8 +3,8 @@ let currentShow = null;
 let numletters = 0;
 let lastLetterVal;
 let newSection;
-let content = document.getElementById("content-area");
-document.getElementById("box-btn").onclick =  function () {
+let content = $("#content-area");
+$("#box-btn").on("click", function () {
   lastLetterVal = "A".charCodeAt(0) + Math.floor(numletters / 2);
   letterList.push(
     ...[
@@ -14,39 +14,33 @@ document.getElementById("box-btn").onclick =  function () {
     ].sort(() => 0.5 - Math.random())
   );
   for (let i = 0; i < 3; i++) {
-    newSection = document.createElement("section");
-    newSection.style.width = content.lastElementChild
-      ? `calc(${content.lastElementChild.style.width} + 20px)`
-      : "80px";
-    newSection.style.height = content.lastElementChild
-      ? `calc(${content.lastElementChild.style.height} + 20px)`
-      : "80px";
-    newSection.id =
-      "box-" + document.getElementById("content-area").children.length;
-    newSection.onclick = function (e) {
-      e.target.innerHTML = e.target.innerHTML
-        ? ""
-        : "" + letterList[parseInt(e.target.id.split("-")[1])];
+    newSection =  $('<section>').css({
+      'width': ( content.children().last().width() + 20 || 80 ) + 'px',
+      'height': ( content.children().last().height() + 20 || 80 ) + 'px',
+    }).attr('id', 'box-' + content.children().length)
+    .html(`<p>${letterList[content.children().length]}</p>`);
+    $(newSection.children()[0]).hide();
+    newSection.on('click', function () {
+      console.log(this,this.childNodes[0]);
+      $(this.childNodes[0]).toggle();
       if (!currentShow) {
-        currentShow = e.target;
+        currentShow = this;
         return;
       }
-      if (e.target === currentShow) {
+      if (this === currentShow) {
         currentShow = null;
         return;
       }
-      if (currentShow.innerHTML !== e.target.innerHTML) {
-        currentShow.innerHTML = "";
-        e.target.innerHTML = "";
+      if (currentShow.innerHTML !== this.innerHTML) {
+        $(currentShow.childNodes[0]).toggle();
+        $(this.childNodes[0]).toggle();
         currentShow = null;
         return;
       }
-      currentShow.style.background = "gray";
-      e.target.style.background = "gray";
-      currentShow.onclick = null;
-      e.target.onclick = null;
+      $(currentShow).css({'background':'gray'}).off("click");
+      $(this).css({'background':'gray'}).off("click");
       currentShow = null;
-    };
-    content.appendChild(newSection);
+    });
+    content.append(newSection);
   }
-};
+});
