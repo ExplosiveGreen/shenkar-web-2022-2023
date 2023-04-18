@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>QR Scanner Example</title>
+  <style>
+    #video {
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-    
+  <h1>QR Scanner Example</h1>
+  <video id="video" playsinline></video>
+  <script type="module">
+    import QRScanner from 'https://cdnjs.cloudflare.com/ajax/libs/qr-scanner/1.4.2/qr-scanner.min.js';
+    const videoElement = document.getElementById('video');
+    const qrScanner = new QRScanner(videoElement, result => {
+      alert(`Scanned QR code: ${result}`);
+    });
+
+    qrScanner.start();
+
+    document.getElementById('video').addEventListener('click', () => {
+      qrScanner.stop();
+    });
+  </script>
 </body>
 </html>
