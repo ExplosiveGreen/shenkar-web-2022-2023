@@ -1,32 +1,12 @@
 <html>
 <head>
-    <title>Html-Qrcode Demo</title>
-<body>
-    <div id="qr-reader" style="width:500px"></div>
-    <div id="qr-reader-results"></div>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
-<script>
-    function docReady(fn) {
-        // see if DOM is already available
-        if (document.readyState === "complete"
-            || document.readyState === "interactive") {
-            // call on next available tick
-            setTimeout(fn, 1);
-        } else {
-            document.addEventListener("DOMContentLoaded", fn);
-        }
-    }
-
-    docReady(function () {
-        var resultContainer = document.getElementById('qr-reader-results');
-        var html5QrCode = new Html5Qrcode("qr-reader");
-        function onScanSuccess(decodedText, decodedResult) {
-            resultContainer.innerHTML = `Scan result ${decodedText}`;
-            html5QrCode.stop();
-        }
-        html5QrCode.start({ facingMode: "environment" }, { fps: 10, qrbox: 250 }, onScanSuccess);
-    });
-</script>
+    <title>Qrcode reader test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+    <link rel="stylesheet" href="test.css" />
 </head>
+<body>
+    <div id="qr-reader"></div>
+    <div id="qr-reader-results"></div>
+    <script src="test.js"></script>
+</body>
 </html>
