@@ -24,6 +24,7 @@
             "qr-reader", { fps: 10, qrbox: 250 });
         function onScanSuccess(decodedText, decodedResult) {
                 alert(`Scan result ${decodedText}`, decodedResult);
+                html5QrcodeScanner.clear();
         }
         html5QrcodeScanner.render(onScanSuccess);
     });
