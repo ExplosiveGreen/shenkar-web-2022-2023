@@ -1,9 +1,10 @@
 const resultContainer = document.getElementById('qr-reader-results');
 let html5QrCode = new Html5Qrcode("qr-reader");
-function onScanSuccess(decodedText) {
+function onScanSuccess(decodedText, decodedResult) {
     resultContainer.innerHTML = `Scan result ${decodedText}`;
     html5QrCode.stop();
 }
+
 // facingMode: "environment" mean use back camera
 // qrbox : width and height of scanning area
 // aspectRatio : of entire feed take automatically entire width but hight from the aspect ratio
