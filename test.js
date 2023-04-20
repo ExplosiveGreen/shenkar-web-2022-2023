@@ -1,6 +1,6 @@
 const resultContainer = document.getElementById('qr-reader-results');
 let html5QrCode = new Html5Qrcode("qr-reader");
-function onScanSuccess(decodedText, decodedResult) {
+function onScanSuccess(decodedText) {
     resultContainer.innerHTML = `Scan result ${decodedText}`;
     html5QrCode.stop();
 }
