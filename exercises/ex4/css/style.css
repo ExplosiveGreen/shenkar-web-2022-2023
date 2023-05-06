@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/pixelade');
 * {
     padding: 0;
     margin: 0;
@@ -5,11 +6,41 @@
 header, footer, section, aside, nav, article, figure, figcaption {
     display: block;
 }
+html, body, #wrapper, main, #game_area {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
 body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+#wrapper {
+    font-family: 'Pixelade', sans-serif;
+    color: white;
+    background-image: radial-gradient(circle at center, rgb(53,222,0), #000000 100%);
+}
+main {
+    gap: 10px;
+}
+main > * {
+    border: 2px dotted red;
+} 
+#form_area {
+    display: flex;
+    right: 0;
+    height: 100%;
+}
+#form_area svg {
+    width:20%;
+}
+#form_area input, #form_area textarea{
+    background-color: transparent;
+    color: white !important;
+    border: 3px solid;
 }
 textarea#address {
     height: calc(24px * 5);

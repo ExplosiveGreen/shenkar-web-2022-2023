@@ -14,7 +14,12 @@
     <title>Document</title>
 </head>
 <body>
-<?php echo "Hello World"; ?>
-<script src="js/script.js"></script>
+<?php 
+  if( $_GET['score'] > 500 ) {
+    echo "You are a winner";
+  } else {
+    echo "You are a loser";
+  }
+?>
 </body>
 </html>
