@@ -15,7 +15,7 @@
 </head>
 <body>
 <?php 
-  if( $_GET['score'] > 500 ) {
+  if( $_GET['score'] > $_GET['highscore'] ) {
     echo "You are a winner";
   } else {
     echo "You are a loser";

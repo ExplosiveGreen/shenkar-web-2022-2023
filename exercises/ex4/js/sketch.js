@@ -78,6 +78,7 @@ function endGame(){
   var hintmsgpart1 = "sorry to tell you but your score isn't good enough the all time highscore to beat is " + alltimehighscore;
   var hintmsgpart2 = " wait a second isn't that score imposible to GET maybe there is another way to set the score";
   document.getElementById('score').value = highscore;
+  document.getElementById('highscore').value = alltimehighscore;
   msgWidht = textWidth(msg);
   scoreWidht = textWidth(score);
   hintmsgWidhtpart1 = textWidth(hintmsgpart1);
