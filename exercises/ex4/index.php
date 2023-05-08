@@ -16,10 +16,15 @@
 <body>
 <?php 
   if( $_GET['score'] > $_GET['highscore'] ) {
-    echo "You are a winner";
+    echo "congratulations " . $_GET['name'] . " you have won the game.";
+    echo "the ". $_GET['color'] . " Nokia 3310 will be delivered to you on " . $_GET['address'] . " in 3-5 business days";
+    echo "if you want to play again press the link below";
   } else {
-    echo "You are a loser";
+    echo "You can't order this phone your score is too low"; 
+    echo "Your score: " . $_GET['score'] . "\nhigh score to beat: " . $_GET['highscore'];
+    echo "try again to return to the game press the link below";
   }
 ?>
+<a href="students/2022-2023/web1/dev_23/exercises/ex4/edit.html">Back to the game</a>
 </body>
 </html>
