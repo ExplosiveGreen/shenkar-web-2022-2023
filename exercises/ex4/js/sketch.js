@@ -1,14 +1,18 @@
-var snake;
-var pixel_size = 20;
-var shots = [];
-var movement = [];
-var highscore = 0;
-var alltimehighscore = 0;
-var gameState = 'init';
-var sketchWidth;
-var sketchHeight;
+let snake;
+let gameOverSound;
+let foodSound;
+let pixel_size = 20;
+let shots = [];
+let movement = [];
+let highscore = 0;
+let alltimehighscore = 0;
+let gameState = 'init';
+let sketchWidth;
+let sketchHeight;
 
 function setup(){
+  gameOverSound = loadSound('assets/gameOver.wav');
+  foodSound = loadSound('assets/food.wav');
   textFont('Pixelade');
   sketchWidth = document.getElementById("game_area").clientWidth+92;
   sketchHeight = document.getElementById("game_area").clientHeight;
@@ -25,8 +29,8 @@ function windowResized(){
 
 function initGame(){
   background(0, 0, 0);
-  var name = 'Snake Game';
-  alltimehighscore = (width*height*1000)/(pixel_size*pixel_size);
+  const name = 'Snake Game';
+  alltimehighscore = Math.floor((width*height*1000)/(pixel_size*pixel_size));
   textSize(50);
   fill(53,222,0);
   nameWidht = textWidth(name);
@@ -59,9 +63,10 @@ function runGame(){
   snake.checkDeath();
 
   fill(255, 0, 0);
-  for(var i=0;i<shots.length;i++){
+  for(let i=0;i<shots.length;i++){
     rect(shots[i].x, shots[i].y, pixel_size, pixel_size);
     if(snake.eat(shots[i])){
+      foodSound.play();
       snake.tail.push(createVector(snake.x, snake.y));
       shots.splice(i, 1);
       setJelloShots(1);
@@ -71,14 +76,16 @@ function runGame(){
 }
 
 function endGame(){
+  gameOverSound.play();
   background(0, 0, 0);
   textSize(32);
-  var msg = 'Game Over';
-  var score = 'Your heighst Score is ' + highscore;
-  var hintmsgpart1 = "sorry to tell you but your score isn't good enough the all time highscore to beat is " + alltimehighscore;
-  var hintmsgpart2 = " wait a second isn't that score imposible to GET maybe there is another way to set the score";
+  const msg = 'Game Over';
+  const score = 'Your heighst Score is ' + highscore;
+  const hintmsgpart1 = "sorry to tell you but your score isn't good enough the all time highscore to beat is " + alltimehighscore;
+  const hintmsgpart2 = " wait a second isn't that score imposible to GET maybe there is another way to set the score";
   document.getElementById('score').value = highscore;
   document.getElementById('highscore').value = alltimehighscore;
+  document.getElementById('gameValidation').style.display = 'none';
   msgWidht = textWidth(msg);
   scoreWidht = textWidth(score);
   hintmsgWidhtpart1 = textWidth(hintmsgpart1);
@@ -108,10 +115,10 @@ function draw(){
 }
 
 function setJelloShots(num){
-  var cols = floor(width / pixel_size);
-  var rows = floor(height / pixel_size);
-  for(var i=0;i<num;i++){
-    var location = createVector(floor(random(cols)), floor(random(rows))).mult(pixel_size);
+  const cols = floor(width / pixel_size);
+  const rows = floor(height / pixel_size);
+  for(let i=0;i<num;i++){
+    let location = createVector(floor(random(cols)), floor(random(rows))).mult(pixel_size);
     while(snake_intersect(location)){
       location = createVector(floor(random(cols)), floor(random(rows))).mult(pixel_size);
     }
@@ -120,17 +127,17 @@ function setJelloShots(num){
 }
 
 function snake_intersect(location){
-  var intersect = false;
+  let intersect = false;
   if(location.x == snake.pos.x && location.y == snake.pos.y){
     intersect = true;
   }else{
-    for(var i=0;i<snake.tail.length;i++){
+    for(let i=0;i<snake.tail.length;i++){
       if(location.x == snake.tail[i].x && location.y == snake.tail[i].y){
         intersect = true;
         break;
       }
     }
-    for(var i=0;i<shots.length;i++){
+    for(let i=0;i<shots.length;i++){
       if(location.x == shots[i].x && location.y == shots[i].y){
         intersect = true;
         break;
@@ -156,7 +163,7 @@ function Snake(){
     this.show = function(){
       fill(53,222,0);
       //draw the snake tail
-      for(var i=0;i<this.tail.length;i++){
+      for(let i=0;i<this.tail.length;i++){
         rect(this.tail[i].x, this.tail[i].y, pixel_size, pixel_size);
       }
   
@@ -189,7 +196,7 @@ function Snake(){
       if(this.pos.x >= width || this.pos.y >= height || this.pos.x < 0 || this.pos.y < 0){
         gameState = 'end';
       }
-      for(var i=0;i<this.tail.length;i++){
+      for(let i=0;i<this.tail.length;i++){
         if(this.tail[i].x == this.pos.x && this.tail[i].y == this.pos.y){
           gameState = 'end';
         }

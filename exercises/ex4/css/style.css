@@ -37,11 +37,23 @@ main > * {
 #form_area svg {
     width:20%;
 }
-#form_area input, #form_area textarea{
+#form_area input:not([type='submit']), #form_area textarea{
     background-color: transparent;
     color: white !important;
     border: 3px solid;
 }
 textarea#address {
     height: calc(24px * 5);
+}
+#form_area select {
+    background-color: transparent;
+    color: white !important;
+    border: 3px solid;
+}
+#form_area select option {
+    color:black;
+}
+
+#gameValidation {
+    display: block;
 }

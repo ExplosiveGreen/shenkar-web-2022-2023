@@ -8,6 +8,9 @@ window.onload = function () {
     const age = $('#age');
     const temper = $('#temper');
     const clubForm = $('#clubForm');
+    const score = $('#score');
+    const highscore = $('#highscore');
+    const gameForm = $('#gameForm');
 
     customValidationMsg(validateinterests(), interests);
 
@@ -20,6 +23,7 @@ window.onload = function () {
     age.change( function (e) { customValidationMsg(validateAge(), age) } );
     temper.on( "input", function (e) { document.getElementById('temperValue').innerHTML = temper.val() } );
     clubForm.submit( validateForm );
+    gameForm.submit( validateGameForm );
 
     function customValidationMsg(valid, input) {
         input.removeClass('is-valid');
@@ -60,4 +64,10 @@ window.onload = function () {
     function validateForm(e) {
         return validateFullName() && validatePassword() && validateinterests() && validateEmail() && validateWebsite() && validatePhone() && validateAge();
     };
+    function validateScore( ) {
+        return score.val() != '' && highscore.val() != '';
+    }
+    function validateGameForm( event ) {
+        return validateScore() && validateFullName();
+    }
 };
