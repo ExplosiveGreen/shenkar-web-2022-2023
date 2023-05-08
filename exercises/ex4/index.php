@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <main>
+<div id="wrapper">
     <h1>
       <?php
       if ($_GET['score'] > $_GET['highscore']) {
@@ -40,8 +40,8 @@
       }
       ?>
     </h3>
-    <a href="students/2022-2023/web1/dev_23/exercises/ex4/edit.html">Back to the game</a>
-  </main>
+    <a href="edit.html">Back to the game</a>
+</div>
 </body>
 
 </html>
