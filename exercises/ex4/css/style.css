@@ -12,9 +12,10 @@ html, body, #wrapper, main, #game_area {
     height: 100%;
     width: 100%;
 }
+#mainBody {
+    height: auto;
+}
 body{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
