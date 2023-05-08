@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<div id="wrapper">
+  <div id="wrapper">
     <h1>
       <?php
       if ($_GET['score'] > $_GET['highscore']) {
@@ -32,7 +32,7 @@
       ?>
     </h2>
     <h3>
-    <?php
+      <?php
       if ($_GET['score'] > $_GET['highscore']) {
         echo "if you want to play again press the link below";
       } else {
@@ -41,7 +41,7 @@
       ?>
     </h3>
     <a href="edit.html">Back to the game</a>
-</div>
+  </div>
 </body>
 
 </html>
