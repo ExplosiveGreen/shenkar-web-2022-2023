@@ -34,7 +34,7 @@ main > * {
     right: 0;
     height: 100%;
 }
-#form_area svg {
+#form_area img {
     width:20%;
 }
 #form_area input:not([type='submit']), #form_area textarea{
