@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Form exercise for shenkar compation reservation for nokia phone with snake game and a hidden CTF">
     <script
-    src="https://code.jquery.com/jquery-3.6.4.min.js"
-    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-    crossorigin="anonymous"
-  ></script>
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
-    />
+    >
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
@@ -23,7 +23,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/sketch.js"></script>
     <script src="js/script.js"></script>
     <title>Document</title>
@@ -40,7 +40,7 @@
       <main class="d-flex flex-row">
         <div id="game_area"></div>
         <aside id="form_area" class="align-items-center d-flex flex-column">
-          <img src="assets/nokia.svg" alt="nokia" title="nokia" width="20%"></img>
+          <img src="assets/nokia.svg" alt="nokia" title="nokia">
 
           <form
             action="https://se.shenkar.ac.il/students/2022-2023/web1/dev_23/exercises/ex4/index.php"
@@ -54,46 +54,38 @@
               type="hidden"
               name="score"
               id="score"
-              required
-            />
+            >
             <input
               class="form-control"
               type="hidden"
               name="highscore"
               id="highscore"
-              required
-            />
+            >
             <div class="w-100">
-              <label for="fullName" class="form-label"
-                >What is your full name?</label
-              >
+              <label for="fullName" class="form-label">What is your full name?</label>
               <input
                 class="form-control"
                 type="text"
                 name="fullName"
                 id="fullName"
                 required
-              />
+              >
               <div class="invalid-feedback">
                 Full Name must be only letters with atleast one space
               </div>
             </div>
             <div class="w-100">
-              <label for="address" class="form-label"
-                >Where to send the phone to ?</label
-              >
+              <label for="address" class="form-label">Where to send the phone to ?</label>
               <input
                 class="form-control"
                 type="text"
                 name="address"
                 id="address"
                 required
-              />
+              >
             </div>
             <div class="w-100">
-              <label for="color" class="form-label"
-                >Choose phone color</label
-              >
+              <label for="color" class="form-label">Choose phone color</label>
               <select class="form-select" name="color" id="color">
                 <option value="blue">Blue</option>
                 <option value="red">Red</option>
@@ -101,12 +93,12 @@
                 <option value="white">white</option>
               </select>
             </div>
-              <input type="submit" class="btn btn-primary w-100" value="Submit">
-              <div class="invalid-feedback" id="gameValidation">
-                You didn't play the game.
-              </div>
+            <input type="submit" class="btn btn-primary w-100" value="Submit">
+            <div class="invalid-feedback" id="gameValidation">
+              You didn't play the game.
+            </div>
           </form>
-        </div>
+        </aside>
       </main>
     </div>
   </body>
