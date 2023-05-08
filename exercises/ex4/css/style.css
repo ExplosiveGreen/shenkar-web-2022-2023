@@ -26,6 +26,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+#interests div {
+    margin-bottom: 8px;
+}
 #wrapper {
     font-family: 'Pixelade', sans-serif;
     color: white;
