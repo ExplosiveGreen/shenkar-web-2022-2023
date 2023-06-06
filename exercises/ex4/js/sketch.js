@@ -1,6 +1,6 @@
 let snake;
-let gameOverSound;
-let foodSound;
+// let gameOverSound;
+// let foodSound;
 let pixel_size = 20;
 let shots = [];
 let movement = [];
@@ -11,8 +11,8 @@ let sketchWidth;
 let sketchHeight;
 
 function setup(){
-  gameOverSound = loadSound('assets/gameOver.wav');
-  foodSound = loadSound('assets/food.wav');
+  // gameOverSound = loadSound('assets/gameOver.wav');
+  // foodSound = loadSound('assets/food.wav');
   textFont('Pixelade');
   sketchWidth = document.getElementById("game_area").clientWidth+92;
   sketchHeight = document.getElementById("game_area").clientHeight;
@@ -66,7 +66,7 @@ function runGame(){
   for(let i=0;i<shots.length;i++){
     rect(shots[i].x, shots[i].y, pixel_size, pixel_size);
     if(snake.eat(shots[i])){
-      foodSound.play();
+      // foodSound.play();
       snake.tail.push(createVector(snake.x, snake.y));
       shots.splice(i, 1);
       setJelloShots(1);
@@ -76,7 +76,7 @@ function runGame(){
 }
 
 function endGame(){
-  gameOverSound.play();
+  // gameOverSound.play();
   background(0, 0, 0);
   textSize(32);
   const msg = 'Game Over';
