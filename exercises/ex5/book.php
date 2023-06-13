@@ -19,7 +19,7 @@
     <div>
         <?php
             echo "<h1>".$row['name']."</h1>";
-            echo "<h2 bs-category='".$row['category']."'>".$book['category']."</h2>";
+            echo "<h2 bs-category='".$row['category']."'>".$row['category']."</h2>";
             echo "<img src='".$row['image1']."' alt='".$row['image1']."'>";
             echo "<img src='".$row['image2']."' alt='".$row['image2']."'>"; 
         ?>
