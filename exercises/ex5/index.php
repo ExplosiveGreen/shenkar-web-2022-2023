@@ -30,7 +30,6 @@
         }
         echo "</div>";
         ?>
-        </div>
     </div>
     <?php
     mysqli_free_result($result);
