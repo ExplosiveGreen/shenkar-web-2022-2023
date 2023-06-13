@@ -31,11 +31,11 @@
         echo "</div>";
         ?>
     </div>
+    <script src="js/script.js"></script>
     <?php
     mysqli_free_result($result);
     ?>
 </body>
-<script src="js/script.js"></script>
 </html>
 <?php
 //close DB connection

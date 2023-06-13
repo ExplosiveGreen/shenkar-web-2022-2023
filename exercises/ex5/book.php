@@ -24,8 +24,8 @@
             echo "<img src='".$row['image2']."' alt='".$row['image2']."'>"; 
         ?>
     </div>
+    <script src="js/script2.js"></script>
 </body>
-<script src="js/script2.js"></script>
 </html>
 <?php
 //close DB connection
