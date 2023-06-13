@@ -23,7 +23,7 @@
             echo "<section class = 'card-body d-flex flex-column align-items-center'>";
             echo "<img class='card-image-top' src='".$book['image1']."' alt='".$book['image1']."'>";
             echo "<h5 class='card-title'>" . $book['name'] . "</h5>";
-            echo "<h6 class='card-subtitle' bs-category='".$book['category']."'></h6>";
+            echo "<h6 class='card-subtitle' bs-category='".$book['category']."'>".$book['category']."</h6>";
             echo "<img class='card-image-bottom' src='".$book['image2']."' alt='".$book['image2']."'>";
             echo "</section>";
             echo "</a>";
